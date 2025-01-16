@@ -1,0 +1,42 @@
+.title{
+    font-family: sans-serif;
+    color: #a4f52a;
+    text-align: left;
+}
+.tabContainer{
+    width: 100%;
+    height: 100%;
+}
+.tabContainer .buttonContainer{
+    height: 70px;
+}
+.tabContainer .buttonContainer button{
+    width: 25%;
+    height: 100%;
+    float: left;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #a4f52a;
+    background-color: #238500;
+}
+.tabContainer .buttonContainer button:hover{
+    background-color: #238500;
+}
+.tabContainer .tabPanel{
+    height: 100%;
+    background-color: #238500;
+    color: #238500;
+    text-align: start;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 22px;
+    display: none;
+}
