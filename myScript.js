@@ -15,6 +15,16 @@ function showPanel(panelIndex,colorCode) {
     tabPanels[panelIndex].style.backgroundColor=colorCode;
 }
 showPanel(0,'#a4f52a');
+function nextQuestion(currentQuestion) {
+    // Hide current question
+    document.getElementById(`question${currentQuestion}`).classList.add('hidden');
+
+    // Show the next question
+    const next = currentQuestion + 1;
+    document.getElementById(`question${next}`).classList.remove('hidden');
+}
+
+
 
 function showResult() {
 

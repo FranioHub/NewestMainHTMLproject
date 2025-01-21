@@ -2,45 +2,74 @@
 <html lang="da">
 <head>
     <meta charset="UTF-8">
-    <title>Madråd til unge</title>
+    <title>Madkassen</title>
     <link rel="stylesheet" type="text/css" href="css.css">
-	<link rel="icon" type="image/x-icon" href="Tortoise.jpg">
+	<link rel="icon" type="image/x-icon" href="logo.png">
 </head>
 <body style="padding: 50px;background-color:#1f6e05;text-align:center">
-<h1 class="title" style="font-size:70px">Madråde</h1>
+<h1 class="title" style="font-size:70px">Madkassen, gode kostråd<img src="logo.png" alt="Description of image" style="float:right;max-width:300px;width:40%"></h1>
 <div class="tabContainer">
     <div class="buttonContainer">
         <button onclick="showPanel(0,'#a4f52a')">Main</button>
         <button onclick="showPanel(1,'#a4f52a')">Quiz</button>
     </div>
     <div class="tabPanel">
-        <h1>Simple madråd til unge mennesker</h1>
-        <p1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in elit at sapien vestibulum condimentum. Aenean eget magna sem. Nulla ipsum arcu, porta tincidunt eros sit amet, eleifend suscipit neque. Sed porttitor purus ac ante condimentum, condimentum pellentesque mauris sodales. Fusce eu enim pharetra, commodo ante vel, facilisis enim. Mauris vitae laoreet dui. Cras elementum nulla et tortor euismod, in tincidunt lectus dictum. Etiam imperdiet lobortis lectus, nec vestibulum sem aliquet pellentesque. In interdum nisl id ipsum malesuada egestas. Vestibulum ac libero nisl. Pellentesque risus nibh, imperdiet quis mauris vel, consequat fringilla justo.</p1>
-        <h1>Flere madråd</h1>
-        <p1>Fusce sed mi est. Praesent vel diam at odio facilisis mattis non tempor augue. Mauris pretium mollis egestas. Fusce feugiat nibh id mi fringilla dignissim. Integer tristique tincidunt est ut dapibus. Sed sapien augue, ultricies tincidunt interdum eu, euismod vel enim. Maecenas risus augue, viverra vitae massa et, varius consectetur neque. Phasellus blandit, urna faucibus rhoncus vehicula, dui nulla hendrerit odio, nec euismod sem turpis non erat. Aenean pharetra vehicula diam, ac placerat massa suscipit eget. Suspendisse est sem, rutrum ut venenatis ac, auctor in mauris. Pellentesque sit amet metus massa. Praesent vitae ornare leo. Vestibulum mollis interdum malesuada. Morbi at nunc lacus.</p1>
+        <h2>Hvorfor skal jeg være opmærksom på hvad jeg spiser.</h2>
+        <p1>Dårlige madvaner kan lede til mange sygdomme, blandt anden overvægt diabetes og hjerte-kar-sygdomme.</p1>
+        <h2>Det vigtigste</h2>
+        <img src="billed1.png" alt="Description of image" style="float:right;margin:10px;max-width:400px;width:40%">
+        <p1>Man skal passe på at man ikke spiser for meget noget mad fylder mindre end noget andet mad mens det kunne indeholde lige så mange kalorier. Man kan fx spise meget nemmere den samme mængde kalorier i sukker end i salat, det kan føre til at man ubevist spiser flere kalorier end men har brug for og det kan føre til overvægt.
+            Det meste mad er ikke nødvendigvis usundt, men der findes usunde mængder at spise maden. sundhedsstyrelsen anbefaler at spise varieret, de rekommanderer at 25-40% af energien kommer fra fedt, 45-60% af energien kommer fra kulhydrater, hvor max 10% af energien fra kulhydrater er fra sukker og 10-20% af energien kommer fra proteiner, være opmærksom på at fedt er over doblet så energi tæt som kulhydrater og proteiner, så man skal spise mindre af det end andre energikilder til at opnå sin energibehov.
+            Være opmærksom at de her anbefalinger også tager i udgangspunkt om hvad er bæredygtigt for samfundet, man kan fx godt spise mere protein end det er anbefalet, men det vil ikke være godt for klimaet
+        </p1>
+        <h2>Fedt</h2>
+        <p1>Det er rekommanderet at du spiser hovedsageligt umættet fedt, hvilket findes i fisk, nødder og planteolier, dermed skal du undgå at spise for meget mættet fedt, som findes i smør, kød og nogle vegetabilske produkter som fx kokosolie, det er anbefalet at max 10% af dit energiindtag kommer fra mættet fedt. Fedt er næsten dobbelt så høj energi densitet som protein, kulhydrater og fibre, hvilket betyder at man skal spise mindre af det til at dække din energibehov. Fedt er vigtig for levering af vitaminer, det er derfor det er anbefalet at 25-40% af din energi indtag kommer fra fedt.</p1>
+
     </div>
     <div class="tabPanel">
         <div class="container">
             <h1>Questionnaire</h1>
             <form id="questionnaireForm">
-                <p>Hvor meget sukker indtager du?</p>
-                <label>
-                    <input type="radio" name="answer" value="spring" required>
-                    100g om ugen
-                </label><br>
-                <label>
-                    <input type="radio" name="answer" value="summer">
-                    100g-200g om ugen
-                </label><br>
-                <label>
-                    <input type="radio" name="answer" value="autumn">
-                    200g-400g om ugen
-                </label><br>
-                <label>
-                    <input type="radio" name="answer" value="winter">
-                    mere end 400g om ugen
-                </label><br><br>
-                <button type="button" onclick="showResult()">Submit</button>
+                <div class="question" id="question1">
+                    <p>Hvor meget sukker indtager du?</p>
+                    <label>
+                        <input type="radio" name="answer" value="spring" required>
+                        100g om ugen
+                    </label><br>
+                    <label>
+                        <input type="radio" name="answer" value="summer">
+                        100g-200g om ugen
+                    </label><br>
+                    <label>
+                        <input type="radio" name="answer" value="autumn">
+                        200g-400g om ugen
+                    </label><br>
+                    <label>
+                        <input type="radio" name="answer" value="winter">
+                        mere end 400g om ugen
+                    </label><br><br>
+                    <button type="button" onclick="nextQuestion(1)">Next</button>
+                </div>
+                <div id="question2" style="display: none">
+                    <p>HAHAH meget sukker indtager du?</p>
+                    <label>
+                        <input type="radio" name="answer" value="spring" required>
+                        100g om ugen
+                    </label><br>
+                    <label>
+                        <input type="radio" name="answer" value="summer">
+                        100g-200g om ugen
+                    </label><br>
+                    <label>
+                        <input type="radio" name="answer" value="autumn">
+                        200g-400g om ugen
+                    </label><br>
+                    <label>
+                        <input type="radio" name="answer" value="winter">
+                        mere end 400g om ugen
+                    </label><br><br>
+                    <button type="button" onclick="nextQuestion(2)">Next</button>
+                </div>
             </form>
             <div id="result" class="result"></div>
         </div>
