@@ -34,12 +34,8 @@ function nextQuestion(currentQuestion) {
 
 function showResult() {
 
-    const form = document.getElementById('questionnaireForm');
-    const resultDiv = document.getElementById('result');
-    const selectedAnswer = form.answer.value;
-
     let message = '';
-    switch (selectedAnswer) {
+    switch (document.getElementById('questionnaireForm').answer.value) {
         case '1':
             message = 'det er godt du ikke spiser for meget sukker, men husk at du kan godt belønne sig en gang imellem';
             break;
@@ -55,25 +51,24 @@ function showResult() {
         default:
             message = 'Please select an answer.';
     }
-    const form2 = document.getElementById('questionnaireForm2');
-    const selectedAnswer2 = form2.answer.value;
     let message2 = '';
-    switch (selectedAnswer2) {
+    switch (document.getElementById('questionnaireForm2').answer.value) {
         case '1':
-            message2 = '2det er godt du ikke spiser for meget sukker, men husk at du kan godt belønne sig en gang imellem';
+            message2 = 'du spiser for lidt';
             break;
         case '2':
-            message2 = '2du spiser nogenlunde ok mængde sukker, men pas på du ikke spiser mere end det';
+            message2 = 'du spiser godt';
             break;
         case '3':
-            message2 = '2du spiser for meget sukker, for høj sukker indtag kan føre til sukkersyge og overvægt, det er også usundt fortænderne!';
+            message2 = 'du spiser for meget!';
             break;
         case '4':
-            message2 = '2FUCK DU FED, HOLD OP MED AT SPISE SUKKER!';
+            message2 = 'FUCK DU FED, HOLD OP MED AT SPISE MAD!';
             break;
         default:
             message2 = 'Please select an answer.';
     }
+    const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = message + "<br>" +message2;
 
     //resultDiv.textContent = message;
