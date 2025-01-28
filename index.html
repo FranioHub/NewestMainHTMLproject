@@ -33,45 +33,49 @@
                 <div class="question" id="question1">
                     <p>Hvor meget sukker indtager du?</p>
                     <label>
-                        <input type="radio" name="answer" value="spring" required>
+                        <input type="radio" name="answer" value="1" required>
                         100g om ugen
                     </label><br>
                     <label>
-                        <input type="radio" name="answer" value="summer">
+                        <input type="radio" name="answer" value="2">
                         100g-200g om ugen
                     </label><br>
                     <label>
-                        <input type="radio" name="answer" value="autumn">
+                        <input type="radio" name="answer" value="3">
                         200g-400g om ugen
                     </label><br>
                     <label>
-                        <input type="radio" name="answer" value="winter">
+                        <input type="radio" name="answer" value="4">
                         mere end 400g om ugen
                     </label><br><br>
                     <button type="button" onclick="nextQuestion(1)">Next</button>
                 </div>
-                <div id="question2" style="display: none">
-                    <p>HAHAH meget sukker indtager du?</p>
+            </form>
+            <form id="questionnaireForm2">
+                <div class="question" id="question2" style="display: none">
+                    <p>meget mad indtager du?</p>
                     <label>
-                        <input type="radio" name="answer" value="spring" required>
-                        100g om ugen
+                        <input type="radio" name="answer" value="1" required>
+                        mindre end 5kg om ugen
                     </label><br>
                     <label>
-                        <input type="radio" name="answer" value="summer">
-                        100g-200g om ugen
+                        <input type="radio" name="answer" value="2">
+                        5kg-10kg om ugen
                     </label><br>
                     <label>
-                        <input type="radio" name="answer" value="autumn">
-                        200g-400g om ugen
+                        <input type="radio" name="answer" value="3">
+                        10kg-20kg om ugen
                     </label><br>
                     <label>
-                        <input type="radio" name="answer" value="winter">
-                        mere end 400g om ugen
+                        <input type="radio" name="answer" value="4">
+                        mere end 20kg om ugen
                     </label><br><br>
                     <button type="button" onclick="nextQuestion(2)">Next</button>
                 </div>
-            </form>
-            <div id="result" class="result"></div>
+
+            <div id="result" class="result">
+
+            </div>
         </div>
     </div>
 </div>

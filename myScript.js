@@ -17,14 +17,20 @@ function showPanel(panelIndex,colorCode) {
 showPanel(0,'#a4f52a');
 function nextQuestion(currentQuestion) {
     // Hide current question
-    document.getElementById(`question${currentQuestion}`).classList.add('hidden');
-
+    document.getElementById(`question${currentQuestion}`).style.display="none";
+    console.log(currentQuestion);
     // Show the next question
-    const next = currentQuestion + 1;
-    document.getElementById(`question${next}`).classList.remove('hidden');
+    if(currentQuestion<2)
+    {
+        const next = currentQuestion + 1;
+        document.getElementById(`question${next}`).style.display = 'block';
+    }
+    else
+    {
+        console.log("currentQuestion");
+        showResult();
+    }
 }
-
-
 
 function showResult() {
 
@@ -34,21 +40,41 @@ function showResult() {
 
     let message = '';
     switch (selectedAnswer) {
-        case 'spring':
+        case '1':
             message = 'det er godt du ikke spiser for meget sukker, men husk at du kan godt belønne sig en gang imellem';
             break;
-        case 'summer':
+        case '2':
             message = 'du spiser nogenlunde ok mængde sukker, men pas på du ikke spiser mere end det';
             break;
-        case 'autumn':
+        case '3':
             message = 'du spiser for meget sukker, for høj sukker indtag kan føre til sukkersyge og overvægt, det er også usundt fortænderne!';
             break;
-        case 'winter':
+        case '4':
             message = 'FUCK DU FED, HOLD OP MED AT SPISE SUKKER!';
             break;
         default:
             message = 'Please select an answer.';
     }
-    form.style.display = 'none';
-    resultDiv.textContent = message;
+    const form2 = document.getElementById('questionnaireForm2');
+    const selectedAnswer2 = form2.answer.value;
+    let message2 = '';
+    switch (selectedAnswer2) {
+        case '1':
+            message2 = '2det er godt du ikke spiser for meget sukker, men husk at du kan godt belønne sig en gang imellem';
+            break;
+        case '2':
+            message2 = '2du spiser nogenlunde ok mængde sukker, men pas på du ikke spiser mere end det';
+            break;
+        case '3':
+            message2 = '2du spiser for meget sukker, for høj sukker indtag kan føre til sukkersyge og overvægt, det er også usundt fortænderne!';
+            break;
+        case '4':
+            message2 = '2FUCK DU FED, HOLD OP MED AT SPISE SUKKER!';
+            break;
+        default:
+            message2 = 'Please select an answer.';
+    }
+    resultDiv.innerHTML = message + "<br>" +message2;
+
+    //resultDiv.textContent = message;
 }
