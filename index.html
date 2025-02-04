@@ -71,28 +71,49 @@
             <h1>Questionnaire</h1>
             <form id="questionnaireForm">
                 <div class="question" id="question1">
-                    <p>Hvor meget sukker indtager du?</p>
+                    <p>Hvordan vil du vurdere din morgenmadsrutine med hensyn til at inkludere sunde elementer?</p>
                     <label>
-                        <input type="radio" name="answer" value="1" required>
-                        100g om ugen
+                        <input type="radio" name="answer" value="1" required>Jeg spiser regelmæssigt fuldkorn, frugt og mælk eller et plantebaseret alternativ.
                     </label><br>
                     <label>
                         <input type="radio" name="answer" value="2">
-                        100g-200g om ugen
+                        Jeg spiser ofte sukkerholdige snacks til morgenmad.
                     </label><br>
                     <label>
                         <input type="radio" name="answer" value="3">
-                        200g-400g om ugen
+                        Jeg springer ofte morgenmaden over.
                     </label><br>
                     <label>
                         <input type="radio" name="answer" value="4">
-                        mere end 400g om ugen
+                        Jeg drikker kun kaffe om morgenen.
                     </label><br><br>
                     <button type="button" onclick="nextQuestion(1)">Next</button>
                 </div>
             </form>
             <form id="questionnaireForm2">
                 <div class="question" id="question2" style="display: none">
+                    <p>Hvordan integrerer du frugt og grøntsager i din daglige kost?</p>
+                    <label>
+                        <input type="radio" name="answer" value="1" required>
+                        Jeg spiser omkring 10 portioner dagligt
+                    </label><br>
+                    <label>
+                        <input type="radio" name="answer" value="2">
+                        Jeg spiser mindst 5 portioner frugt og grøntsager dagligt.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="answer" value="3">
+                        Jeg spiser kun 1-2 portioner om dagen.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="answer" value="4">
+                        Jeg har ingen fast rutine for mit indtag af frugt og grønt.
+                    </label><br><br>
+                    <button type="button" onclick="nextQuestion(2)">Next</button>
+                </div>
+            </form>
+            <form id="questionnaireForm3">
+                <div class="question" id="question3" style="display: none">
                     <p>meget mad indtager du?</p>
                     <label>
                         <input type="radio" name="answer" value="1" required>
@@ -110,7 +131,29 @@
                         <input type="radio" name="answer" value="4">
                         mere end 20kg om ugen
                     </label><br><br>
-                    <button type="button" onclick="nextQuestion(2)">Next</button>
+                    <button type="button" onclick="nextQuestion(3)">Next</button>
+                </div>
+            </form>
+            <form id="questionnaireForm4">
+                <div class="question" id="question4" style="display: none">
+                    <p>meget mad indtager du?</p>
+                    <label>
+                        <input type="radio" name="answer" value="1" required>
+                        mindre end 5kg om ugen
+                    </label><br>
+                    <label>
+                        <input type="radio" name="answer" value="2">
+                        5kg-10kg om ugen
+                    </label><br>
+                    <label>
+                        <input type="radio" name="answer" value="3">
+                        10kg-20kg om ugen
+                    </label><br>
+                    <label>
+                        <input type="radio" name="answer" value="4">
+                        mere end 20kg om ugen
+                    </label><br><br>
+                    <button type="button" onclick="nextQuestion(4)">Next</button>
                 </div>
             </form>
             <div id="result" class="result"></div>

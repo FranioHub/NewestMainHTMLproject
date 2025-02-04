@@ -20,7 +20,7 @@ function nextQuestion(currentQuestion) {
     document.getElementById(`question${currentQuestion}`).style.display="none";
     console.log(currentQuestion);
     // Show the next question
-    if(currentQuestion<2)
+    if(currentQuestion<4)
     {
         const next = currentQuestion + 1;
         document.getElementById(`question${next}`).style.display = 'block';
@@ -34,42 +34,76 @@ function nextQuestion(currentQuestion) {
 
 function showResult() {
 
-    let message = '';
+    let message = 'error';
     switch (document.getElementById('questionnaireForm').answer.value) {
         case '1':
-            message = 'det er godt du ikke spiser for meget sukker, men husk at du kan godt belønne sig en gang imellem';
+            message = 'Du spiser sundt morgenmad, det godt.';
             break;
         case '2':
-            message = 'du spiser nogenlunde ok mængde sukker, men pas på du ikke spiser mere end det';
+            message = 'Overvej at reducere sukkerindtaget for at undgå et senere energidyk.';
             break;
         case '3':
-            message = 'du spiser for meget sukker, for høj sukker indtag kan føre til sukkersyge og overvægt, det er også usundt fortænderne!';
+            message = 'Prøv at indføre en nærende morgenmad for bedre koncentration og vedvarende energi.';
             break;
         case '4':
-            message = 'FUCK DU FED, HOLD OP MED AT SPISE SUKKER!';
+            message = 'Kombinér din kaffe med et solidt måltid, så du også får de nødvendige næringsstoffer.';
             break;
         default:
             message = 'Please select an answer.';
     }
-    let message2 = '';
+    let message2 = 'error';
     switch (document.getElementById('questionnaireForm2').answer.value) {
         case '1':
-            message2 = 'du spiser for lidt';
+            message2 = 'Du får mange næringsstoffer fra de frugt og grønt du spiser, men husk at variere din kost, så det bliver praktisk at opretholde.';
             break;
         case '2':
-            message2 = 'du spiser godt';
+            message2 = 'Du spiser en god mængde frugt og grønt, forstsæt med denne praksis for at sikre et godt indtag af vitaminer og fibre';
             break;
         case '3':
-            message2 = 'du spiser for meget!';
+            message2 = 'Overvej at øge antallet for at opnå en mere afbalanceret næringsprofil';
             break;
         case '4':
-            message2 = 'FUCK DU FED, HOLD OP MED AT SPISE MAD!';
+            message2 = "Prøv at etablere en fast vane – små ændringer kan gøre en stor forskel for dit helbred.";
             break;
         default:
             message2 = 'Please select an answer.';
     }
+    let message3 = 'error';
+    switch (document.getElementById('questionnaireForm3').answer.value) {
+        case '1':
+            message3 = 'du spiser for lidt';
+            break;
+        case '2':
+            message3 = 'du spiser godt';
+            break;
+        case '3':
+            message3 = 'du spiser for meget!';
+            break;
+        case '4':
+            message3 = 'FUCK DU FED, HOLD OP MED AT SPISE MAD!';
+            break;
+        default:
+            message3 = 'Please select an answer.';
+    }
+    let message4 = 'error';
+    switch (document.getElementById('questionnaireForm4').answer.value) {
+        case '1':
+            message4 = 'du spiser for lidt';
+            break;
+        case '2':
+            message4 = 'du spiser godt';
+            break;
+        case '3':
+            message4 = 'du spiser for meget!';
+            break;
+        case '4':
+            message4 = 'FUCK DU FED, HOLD OP MED AT SPISE MAD!';
+            break;
+        default:
+            message4 = 'Please select an answer.';
+    }
     const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = message + "<br>" +message2;
+    resultDiv.innerHTML = message + "<br>" +message2 + "<br>" + message3 + "<br>" + message4;
 
     //resultDiv.textContent = message;
 }
