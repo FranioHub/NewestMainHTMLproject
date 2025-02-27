@@ -1,5 +1,6 @@
 var tabButtons=document.querySelectorAll(".tabContainer .buttonContainer button");
 var tabPanels=document.querySelectorAll(".tabContainer  .tabPanel");
+showPanel(0,'#a4f52a');
 
 function showPanel(panelIndex,colorCode) {
     tabButtons.forEach(function(node){
@@ -14,7 +15,7 @@ function showPanel(panelIndex,colorCode) {
     tabPanels[panelIndex].style.display="block";
     tabPanels[panelIndex].style.backgroundColor=colorCode;
 }
-showPanel(0,'#a4f52a');
+
 function nextQuestion(currentQuestion) {
     // Hide current question
     document.getElementById(`question${currentQuestion}`).style.display="none";
@@ -33,7 +34,6 @@ function nextQuestion(currentQuestion) {
 }
 
 function showResult() {
-
     let message;
     switch (document.getElementById('questionnaireForm').answer.value) {
         case '1':
@@ -60,10 +60,10 @@ function showResult() {
             message2 = 'Du spiser en god mængde frugt og grønt, forstsæt med denne praksis for at sikre et godt indtag af vitaminer og fibre.';
             break;
         case '3':
-            message2 = 'Overvej at øge antallet for at opnå en mere afbalanceret næringsprofil.';
+            message2 = 'Overvej at spise flere frugt og grøntsager for at opnå en mere afbalanceret næringsprofil.';
             break;
         case '4':
-            message2 = "Prøv at etablere en fast vane – små ændringer kan gøre en stor forskel for dit helbred.";
+            message2 = "Prøv at etablere en vane at spise minds et eller to portioner af frugt eller grønt om dagen, små ændringer kan gøre en stor forskel for dit helbred.";
             break;
         default:
             message2 = 'Please select an answer.';
@@ -78,7 +78,7 @@ function showResult() {
                 '\n';
             break;
         case '3':
-            message3 = 'Det kan være en god idé at starte med små ændringer. Prøv at introducere en ekstra grøntsag eller frugt ved hvert måltid, og find et par sunde opskrifter, du kan lave hjemme. Overvej også at reducere mængden af sukkerholdige drikke ved at erstatte dem med vand eller naturligt frugtvand.';
+            message3 = 'Prøv at undgå at spise fastfood, sukkerholdige drikke og forarbejdede fødevarer. Prøv at introducere en ekstra grøntsag eller frugt ved hvert måltid, og find et par sunde opskrifter, du kan lave hjemme. Overvej også at reducere mængden af sukkerholdige drikke ved at erstatte dem med vand eller naturligt frugtvand.';
             break;
         case '4':
             message3 = 'Begynd med at lære de grundlæggende principper for en sund kost. Du kan starte med at læse artikler fra pålidelige sundheds- og ernæringskilder, se videoer med enkle opskrifter eller endda deltage i et kostkursus for unge. Prøv at eksperimentere med at tilføje en ny frugt eller grøntsag til dine måltider og se, hvordan det føles.\n' +
