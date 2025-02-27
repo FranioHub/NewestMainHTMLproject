@@ -93,7 +93,7 @@ function showResult() {
             message4 = 'Fortsæt med at have sunde snacks som frugt, nødder eller grøntsager tilgængelige. Det kan også være en idé at planlægge dine måltider, så du undgår sult, der kan føre til cravings.';
             break;
         case '2':
-            message4 = 'Det er en god strategi – prøv at eksperimentere med mellemmåltider, der både mætter og er næringsrige, såsom smoothies eller yoghurt med bær.';
+            message4 = 'Prøv at eksperimentere med mellemmåltider, der både mætter og er næringsrige, såsom smoothies eller yoghurt med bær.';
             break;
         case '3':
             message4 = 'Lav en plan, hvor du forudser små portioner af dine yndlingsusunde snacks. På den måde kan du tilfredsstille din craving uden at overdrive, og så kan du fokusere på at spise mere af det sunde det meste af tiden.';
